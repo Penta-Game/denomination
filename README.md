@@ -16,9 +16,9 @@ If you now attach an identifier for the player with his 5 figures ():
 
 Examples:
 
-[4, 5, 1, 2, 0, 0] Move by Player 4 with figure 5 to junction 2
+[4, 5, 2, 0, 0] Move by Player 4 with figure 5 to junction 2
 
-[3, 7, 1, 1, 2, 2] Move by Player 3 with figure 7 to the second stop to junction two counted from corner .
+[3, 7, 1, 2, 2] Move by Player 3 with figure 7 to the second stop to junction two counted from corner .
 
 ## Validation
 
