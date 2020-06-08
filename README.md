@@ -31,4 +31,4 @@ Validation seems like a negligible thing for a simple denomination of fields and
 - Events: WIP
 - Creator: [Penta](https://github.com/penta-jan)
 
-For more resources see [WIP]
+For more resources see [denomination/resources](https://github.com/Penta-Game/denomination/blob/master/resources/README.md)
