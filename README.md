@@ -1,8 +1,8 @@
-# Denomination
+# Denomination and more
 
 This repository contains resources useful for development and research on pentagame.
 
-## Concept
+## Denomination
 
 Due to recent development with multiple pentagame digital games ([boardgame](https://github.com/Penta-Game/boardgame), [pentagame](https://github.com/NikkyAI/pentagame)). The need (at least for me ;)) for an unique identifier system for the fields and events has increased. This system will be implemented in [boardgame backend](https://github.com/Penta-Game/boardgame-backend).
 
