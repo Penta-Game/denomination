@@ -24,7 +24,7 @@ Examples:
 
 Validation seems like a negligible thing for a simple denomination of fields and moves but for a good and fair game it serves as a base. [boardgame backend](https://github.com/Penta-Game/boardgame-backend) is currently working on this.
 
-## Resources
+## References
 
 - Rules: [Pentgame Rules](https://github.com/Penta-Game/Pentagame-Rulesheets)
 - Pentagame (Shop): [pentagame.org](https://pentagame.org)
