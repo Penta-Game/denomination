@@ -6,7 +6,7 @@ This repository contains resources useful for development and research on pentag
 
 Due to recent development with multiple digital versions of pentagame ([boardgame](https://github.com/Penta-Game/boardgame), [pentagame](https://github.com/NikkyAI/pentagame)). The need for an usable identifier system for the fields and events has increased. This system will be implemented in [boardgame backend](https://github.com/Penta-Game/boardgame-backend).
 
-To tackle this problem I have tried coming up with an easy-to-use system. The requirements were: system should be easy to store in a database *and* must have be comprehensible for a human. To introduce my concept I need to assign some names for points on the board. The "outer" points are called corners, the "inner" points are called junctions. To set a base the junctions and corners are named by integers. To get these start on the top left junction and count from 1 clockwise. If finished continue with the next number (6) on the corners from the top corner clockwise. Repeat this for the corners starting from 6 and you have unique identifiers for the Fields. The stops are now handled by using two adjacent fields and storing the counting the steps from the first to the second field. If you want to reference a field you just fill the `counter` and `end` with zeros. A player figure is named after the junction (6-10) it started on.
+To tackle this problem [Penta](https://github.com/penta-jan) and [Cobalt](https://sinclair.gq) have tried coming up with an easy-to-use system. The requirements were: system should be easy to store in a database *and* must have be comprehensible for a human. To introduce my concept I need to assign some names for points on the board. The "outer" points are called corners, the "inner" points are called junctions. To set a base the junctions and corners are named by integers. Count / name / create corner stops counter-clockwise (0..4) and count / name / create junction stops opposite of those (5..9). The stops are now handled by using two adjacent fields and storing the counter of needed- steps from the first to the second field. If you want to reference a field you just fill the `counter` and `end` with zeros. Set colour and number equivalent: 0= white, 1= green, 2 = yellow, 3=red, 4=blue (you may change the colours as needed). A player figure is named after the corner it stars from/ the colour it bears. Thus, Corner 0 is white and player piece 0 is white.
 
 > Field: \[Start, Counter, End\]
 
@@ -18,7 +18,13 @@ Examples:
 
 [4, 5, 2, 0, 0] Move by Player 4 with figure 5 to junction 2
 
-[3, 7, 1, 2, 2] Move by Player 3 with figure 7 to the second stop to junction two counted from corner .
+[3, 7, 1, 2, 2] Move by Player 3 with figure 7 to the second stop to junction two counted from corner.
+
+### Math
+
+By following this concept a few equations are introduced:
+
+- corner x is at angle (x*\pi/5) and junction (x-5) is at angle (x*\pi/5-\pi/10)
 
 ## Validation
 
