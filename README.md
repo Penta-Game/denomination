@@ -8,6 +8,8 @@ Due to recent development with multiple digital versions of pentagame ([boardgam
 
 To tackle this problem [Penta](https://github.com/penta-jan) and [Cobalt](https://sinclair.gq) have tried coming up with an easy-to-use system. The requirements were: system should be easy to store in a database *and* must have be comprehensible for a human. To introduce my concept I need to assign some names for points on the board. The "outer" points are called corners, the "inner" points are called junctions. To set a base the junctions and corners are named by integers. Count / name / create corner stops counter-clockwise (0..4) and count / name / create junction stops opposite of those (5..9). The stops are now handled by using two adjacent fields and storing the counter of needed- steps from the first to the second field. If you want to reference a field you just fill the `counter` and `end` with zeros. Set colour and number equivalent: 0= white, 1= green, 2 = yellow, 3=red, 4=blue (you may change the colours as needed). A player figure is named after the corner it stars from/ the colour it bears. Thus, Corner 0 is white and player piece 0 is white.
 
+Gray pieces (5 in total) are denominated as 6-10 and black pieces 11-15. Black pieces are assigned to the junction = number - 11, e.g. piece 11 is on junction 0.
+
 > Field: \[Start, Counter, End\]
 
 If you now attach an identifier for the player with his 5 figures ():
