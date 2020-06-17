@@ -20,7 +20,7 @@ Examples:
 
 [4, 5, 2, 0, 0] Move by Player 4 with figure 5 to junction 2
 
-[3, 7, 1, 2, 2] Move by Player 3 with figure 7 to the second stop to junction two counted from corner.
+[3, 5, 1, 2, 2] Move by Player 3 with figure 5 to the second stop to junction two counted from corner.
 
 If you have any ideas or your own concept open an issue and tell us about it.
 
@@ -28,7 +28,7 @@ If you have any ideas or your own concept open an issue and tell us about it.
 
 By following this concept a few equations are introduced:
 
-- corner x is at angle (x*\pi/5) and junction (x-5) is at angle (x*\pi/5-\pi/10)
+- corner x is at angle (x*\pi/5) and junction (x-5) is at angle (x*\pi/5+\pi/2)
 - More are WIP
 
 ## Validation
