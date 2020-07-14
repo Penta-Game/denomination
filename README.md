@@ -35,7 +35,7 @@ By following this concept a few equations are introduced:
 
 ## Validation
 
-Validation seems like a negligible thing for a simple denomination of fields and moves but for a good and fair game it serves as a base. [boardgame backend](https://github.com/Penta-Game/boardgame-backend) is currently working on this.
+Validation is at the moment only available with python as part of the [pentagraph](https://pypi.org/project/pentagraph/) package.
 
 ## References
 
