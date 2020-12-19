@@ -4,7 +4,7 @@ This repository contains resources useful for development and research on pentag
 
 ## Denomination
 
-Due to recent development with multiple digital versions of pentagame ([boardgame](https://github.com/Penta-Game/boardgame), [pentagame](https://github.com/NikkyAI/pentagame)). The need for an usable identifier system for the fields and events has increased. This system will be implemented in [boardgame backend](https://github.com/Penta-Game/boardgame-backend).
+Due to recent development with multiple digital versions of pentagame ([boardgame](https://github.com/Penta-Game/boardgame), [pentagame](https://github.com/NikkyAI/pentagame)). The need for an usable identifier system for the fields and events has increased. This system will be implemented in [pentagame-online](https://github.com/Penta-Game/pentagame).
 
 To tackle this problem [Penta](https://github.com/penta-jan) and [Cobalt](https://sinclair.gq) have tried coming up with an easy-to-use system. The requirements were: system should be easy to store in a database *and* must have be comprehensible for a human. To introduce my concept I need to assign some names for points on the board. The "outer" points are called corners, the "inner" points are called junctions. To set a base the junctions and corners are named by integers. Count / name / create corner stops counter-clockwise (0..4) and count / name / create junction stops opposite of those (5..9). The stops are now handled by using two adjacent fields and storing the counter of needed- steps from the first to the second field. If you want to reference a field you just fill the `counter` and `end` with zeros. Set colour and number equivalent: 0= white, 1= green, 2 = yellow, 3=red, 4=blue (you may change the colours as needed). A player figure is named after the corner it stars from/ the colour it bears. Thus, junction 0 is white and player piece 0 is white.
 
@@ -36,6 +36,8 @@ By following this concept a few equations are introduced:
 ## Validation
 
 Validation is at the moment only available with python as part of the [pentagraph](https://pypi.org/project/pentagraph/) package.
+
+You can also find a working implementation, based on breadth first search, in [pentagame online](https://github.com/Penta-Game/pentagame). It's being activly developed and is portentially gonna be in it's own crate in the future.
 
 ## References
 
