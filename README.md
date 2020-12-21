@@ -37,7 +37,7 @@ By following this concept a few equations are introduced:
 
 Validation is at the moment only available with python as part of the [pentagraph](https://pypi.org/project/pentagraph/) package.
 
-You can also find a working implementation, based on breadth first search, in [pentagame online](https://github.com/Penta-Game/pentagame). It's being activly developed and is portentially gonna be in it's own crate in the future.
+You can also find a working implementation, based on breadth first search, in [pentagame online](https://github.com/Penta-Game/pentagame). It's being activly developed and is potentially gonna move the pentagame realated logic into an own crate in the future.
 
 ## References
 
