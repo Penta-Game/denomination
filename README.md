@@ -12,6 +12,8 @@ Gray pieces (5 in total) are denominated as 6-10 and black pieces 11-15. Black p
 
 > Field: \[Start, Counter, End\]
 
+Note: Start > End !
+
 If you now attach an identifier for the player with his 5 figures ():
 
 > Move: \[PlayerID, FigureID, Start, Counter, End\]
@@ -33,11 +35,32 @@ By following this concept a few equations are introduced:
 - corner x is at angle (x*\pi/5) and junction (x-5) is at angle (x*\pi/5+\pi/2)
 - More are WIP
 
+## Heuristics
+
+Heuristics for shortest path by Cobalt for above mentioned denomination.
+
+Given two fields \[k1, c1, j1], \[k2, c2, j2\] then k1, j1, k2, j2 ∊ K.
+
+Assuming:
+  - corners ∊ C
+  - junctions ∊ J
+  - C + J ∊ K
+  - all stops except C + J ∊ S
+  - K + S ∊ F
+  - k1 > k2
+  
+From this it's possible to us a derived from of the manhattan distance formula. See below talbe.
+
+- k1 ∊ J, k2 ∊ J: (k1 - k2) * 4 + c1 + c2 
+- k1 ∊ J, k2 ∊ C: k2 * 4 + c1 + c2 + 6 (Warning: This can be inaccurate up to c2)
+- k1 ∊ C, k2 ∊ C: (k1 - k2) * 4 + c1 + c2
+
+> Note: k1 ∊ C and k2 ∊ J is not possible since k1 is required to be always higher than k2
+  
+
 ## Validation
 
-Validation is at the moment only available with python as part of the [pentagraph](https://pypi.org/project/pentagraph/) package.
-
-You can also find a working implementation, based on breadth first search, in [pentagame online](https://github.com/Penta-Game/pentagame). It's being activly developed and is potentially gonna move the pentagame realated logic into an own crate in the future.
+Validation is at the moment only available with python as part of the [pentagraph](https://pypi.org/project/pentagraph/) package. It's being worked on with a graph based approach that validates by checking for possible paths with a*.
 
 ## References
 
