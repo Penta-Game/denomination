@@ -49,10 +49,10 @@ Assuming:
   - K + S ∊ F
   - k1 > k2
   
-From this it's possible to us a derived from of the manhattan distance formula. See below talbe.
+From this it's possible to us a derived form of the manhattan distance formula. See below table.
 
 - k1 ∊ J, k2 ∊ J: (k1 - k2) * 4 + c1 + c2 
-- k1 ∊ J, k2 ∊ C: k2 * 4 + c1 + c2 + 6 (Warning: This can be inaccurate up to c2)
+- k1 ∊ J, k2 ∊ C: k2 * 4 + c1 + c2 + 6 (Warning: You need to check if This may be incorrect up to c2)
 - k1 ∊ C, k2 ∊ C: (k1 - k2) * 4 + c1 + c2
 
 > Note: k1 ∊ C and k2 ∊ J is not possible since k1 is required to be always higher than k2
